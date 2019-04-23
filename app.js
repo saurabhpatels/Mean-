@@ -31,11 +31,10 @@ app.use(cors());
 app.use(express.static(path.join(__dirname,'public')));
 app.use(bodyparser.json());
 app.use('/users',users);
+app.use(passport.initialize());
+app.use(passport.session());
 
-
-app.get('/',(req,res,next) => {
-    res.send('Invalid Endpoint');
-});
+require('./config/passport')(passport);
 
 //Listen To The Port
 app.listen(port,()=>{

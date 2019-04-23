@@ -1,0 +1,53 @@
+DAILY WORK REPORT
+Name: Saurabh Patel
+Date: 23-04-2019
+StartTime: 03:00 PM
+EndTime: 07:10 PM
+
+# LearnAngular & Node: [4H:00]
+
+[1H] - Created Register Routes
+        -Created Register API
+        -Add User To Database
+        -Tested Api
+        -Solve Bugs
+        -Import Passport Module
+        -Import JWT-Token Module
+        -Hash Requested Password
+        -Stored Into Mongodb
+        -Verify Mongodb Database
+
+[1H] - Created Authentication Routes
+        -Created Authentication API
+        -Created Authentication Strategy
+        -Set Header With Authentication
+        -Sent Response With Accsess Token
+        -Configure Database Secret Key
+
+[1H] - Created Angular Project
+        -Imported Material Module
+        -Added Route Module
+        -Customize Theme
+            -Accent
+            -Primary
+            -warn
+
+[30M] - Created Components
+        -Login
+        -Register
+        -Home
+        -Dashboard
+        -Set Routes
+
+[30M] -Desgin Register Component
+        -Add Reactive Forms Module
+        -Created FromGroup
+        -Validate Reactive Forms
+
+
+
+
+
+
+
+
