@@ -21,6 +21,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import {environment} from '../environments/environment.prod';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {NgxMasonryModule} from 'ngx-masonry';
+import { NgxContentLoadingModule } from 'ngx-content-loading';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,8 @@ import {NgxMasonryModule} from 'ngx-masonry';
     SlimLoadingBarModule,
     HttpClientModule,
     NgxMasonryModule,
+    NgxContentLoadingModule ,
+
     ToastrModule.forRoot({
       timeOut: 5000,
       positionClass: 'toast-top-center',
