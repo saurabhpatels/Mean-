@@ -14,7 +14,13 @@ import {MatSelectModule} from '@angular/material';
 import {SlimLoadingBarModule} from 'ng2-slim-loading-bar';
 import {HttpClientModule} from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
-import { MasonryGalleryModule } from 'ngx-masonry-gallery';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import {environment} from '../environments/environment.prod';
+import {AngularFireDatabaseModule} from '@angular/fire/database';
+import {NgxMasonryModule} from 'ngx-masonry';
 
 @NgModule({
   declarations: [
@@ -26,7 +32,11 @@ import { MasonryGalleryModule } from 'ngx-masonry-gallery';
     DashboardComponent
   ],
   imports: [
-    MasonryGalleryModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireDatabaseModule,
+    AngularFireStorageModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -35,6 +45,7 @@ import { MasonryGalleryModule } from 'ngx-masonry-gallery';
     MatSelectModule,
     SlimLoadingBarModule,
     HttpClientModule,
+    NgxMasonryModule,
     ToastrModule.forRoot({
       timeOut: 5000,
       positionClass: 'toast-top-center',

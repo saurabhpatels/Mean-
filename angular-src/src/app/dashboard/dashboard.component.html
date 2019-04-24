@@ -1,0 +1,14 @@
+
+<div class="masonry-demo">
+
+
+
+
+  <ngx-masonry [options]="masonryOptions" [useImagesLoaded]="true"  style="padding: 2%"  >
+    <ngxMasonryItem [class.mat-elevation-z5]="true" *ngFor="let picture of items | async" class="masonry-item">
+      <img src="{{picture.url}}" style=" width:100% ; height:50%; " id="{{picture.key}}">
+
+    </ngxMasonryItem >
+  </ngx-masonry>
+
+</div>
