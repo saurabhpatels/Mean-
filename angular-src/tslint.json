@@ -4,6 +4,10 @@
     "codelyzer"
   ],
   "rules": {
+"one-line": false,
+    "variable-name": false,
+    "no-trailing-whitespace": false,
+    "prefer-const": false,
     "array-type": false,
     "arrow-parens": false,
     "deprecation": {

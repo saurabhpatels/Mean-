@@ -1,3 +1,39 @@
-<p>
-  login works!
-</p>
+
+<div class="center" [class.mat-elevation-z15]="true" style="border-radius: 2%; padding: 30px">
+
+    <img  [class.mat-elevation-z5]="true"  src="../../favicon.ico" class="logo">
+ <div>
+   <form [formGroup]="LoginForm"class="example-form" style=" padding-top: 100px;">
+
+     <table class="example-full-width" cellspacing="0"><tr>
+       <mat-form-field class="example-full-width">
+         <input matInput placeholder="Username" formControlName="username">
+         <mat-icon matSuffix>account_circle</mat-icon>
+         <mat-error *ngIf="username.invalid && username.untouched">
+           Please verify Firstname
+         </mat-error>
+       </mat-form-field>
+       <mat-form-field class="example-full-width">
+         <input matInput type="password" placeholder="Password" formControlName="password">
+         <mat-icon matSuffix>vpn_key</mat-icon>
+         <mat-error *ngIf="password.invalid && password.untouched">
+           Please verify Lastname
+         </mat-error>
+       </mat-form-field>
+     </tr></table>
+
+
+     <table class="example-full-width" cellspacing="0"><tr>
+       <td>
+         <button mat-raised-button type="submit"  (click)="authenticateUser()" [disabled]="LoginForm.invalid" color="accent">Login</button>
+       </td>
+       <td>
+         <button mat-raised-button (click)="clear()" color="warn">Clear</button>
+       </td>
+
+     </tr></table>
+
+   </form>
+ </div>
+</div>
+

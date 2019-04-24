@@ -1,48 +1,53 @@
 DAILY WORK REPORT
 Name: Saurabh Patel
-Date: 23-04-2019
-StartTime: 03:00 PM
+Date: 24-04-2019
+StartTime: 10:00 PM
 EndTime: 07:10 PM
 
-# LearnAngular & Node: [4H:00]
+Angular: [6H:00]
 
-[1H] - Created Register Routes
-        -Created Register API
-        -Add User To Database
-        -Tested Api
-        -Solve Bugs
-        -Import Passport Module
-        -Import JWT-Token Module
-        -Hash Requested Password
-        -Stored Into Mongodb
-        -Verify Mongodb Database
+[2H] - Register Module
+        -Validate Register Reactive Forms
+        -Improved Ui
+        -Injected Loading Bar To Every routes
+        -Created Service
+        -Implemented Register API
+        -Redirect To Login
 
-[1H] - Created Authentication Routes
-        -Created Authentication API
-        -Created Authentication Strategy
-        -Set Header With Authentication
-        -Sent Response With Accsess Token
-        -Configure Database Secret Key
+[2H] - Created Login Module
+        -Design Login Module
+        -Add Routes For Login
+        -Created Login Api
+        -Tested Login Api
+        -Solved Api Issue
+        -Created Toaster
+        -Injected Toaster
 
-[1H] - Created Angular Project
-        -Imported Material Module
-        -Added Route Module
-        -Customize Theme
-            -Accent
-            -Primary
-            -warn
+[2H] - Services
+        -Services
+            -GetToken
+            -Logout
+            -isloggedin
+            -AuthenticateUser
+            -RegisterUser
+        -All Tested
+        -Created Guard
+        -InnerPages Guard
+        -AuthGuard
+        -Tested All The Routes with Guards
 
-[30M] - Created Components
-        -Login
-        -Register
-        -Home
-        -Dashboard
-        -Set Routes
+Node js: [2H:00]
+[2H] - NodeJs APi
+        -Compare Password Api
+        -JWT Token APi
+        -Create Login Api
+        -Email Verification API
+        -Registration API
+        -Created Mongodb Schema
+        -Verified Mongodb Database
+        -Validate Database
+        -Tested All The API In Postman
 
-[30M] -Desgin Register Component
-        -Add Reactive Forms Module
-        -Created FromGroup
-        -Validate Reactive Forms
 
 
 

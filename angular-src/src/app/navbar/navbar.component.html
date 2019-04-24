@@ -1,3 +1,4 @@
+
 <mat-toolbar color="primary">
 
 
@@ -7,15 +8,17 @@
 
   <nav>
     <ul>
-      <button routerLink="/" routerLinkActive="active"  mat-button >Home</button>
-      <button routerLink="/dashboard"  mat-button >Dashboard</button>
-      <button routerLink="/login"  mat-button >Login</button>
-      <button routerLink="/register"   mat-button >Register</button>
+      <button *ngIf="!auth.isLoggedIn" routerLink="/" routerLinkActive="active"  mat-button >Home</button>
+      <button  *ngIf="auth.isLoggedIn" routerLink="/dashboard"  mat-button >Dashboard</button>
+      <button *ngIf="!auth.isLoggedIn"  routerLink="/login"  mat-button >Login</button>
+      <button *ngIf="!auth.isLoggedIn"  routerLink="/register"   mat-button >Register</button>
     </ul>
 
 
   </nav>
+  <button (click)="logout()"   mat-button >
+    <mat-icon *ngIf=" auth.isLoggedIn" class="example-icon" aria-hidden="false" aria-label="Example delete icon">logout</mat-icon>
+  </button>
 
-  <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
 
 </mat-toolbar>
