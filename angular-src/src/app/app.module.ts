@@ -10,11 +10,22 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import {MatSelectModule} from '@angular/material';
+import {MatBottomSheetModule, MatIconModule, MatSelectModule} from '@angular/material';
 import {SlimLoadingBarModule} from 'ng2-slim-loading-bar';
 import {HttpClientModule} from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
-import { MasonryGalleryModule } from 'ngx-masonry-gallery';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import {environment} from '../environments/environment.prod';
+import {AngularFireDatabaseModule} from '@angular/fire/database';
+import {NgxMasonryModule} from 'ngx-masonry';
+import { NgxContentLoadingModule } from 'ngx-content-loading';
+import { AdminComponent } from './admin/admin.component';
+import {PopoverModule} from 'ngx-popover';
+import { ImageinfoComponent } from './dashboard/imageinfo/imageinfo.component';
+
 
 @NgModule({
   declarations: [
@@ -23,10 +34,16 @@ import { MasonryGalleryModule } from 'ngx-masonry-gallery';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    DashboardComponent
+    DashboardComponent,
+    AdminComponent,
+    ImageinfoComponent,
   ],
   imports: [
-    MasonryGalleryModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireDatabaseModule,
+    AngularFireStorageModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -35,18 +52,23 @@ import { MasonryGalleryModule } from 'ngx-masonry-gallery';
     MatSelectModule,
     SlimLoadingBarModule,
     HttpClientModule,
+    NgxMasonryModule,
+    NgxContentLoadingModule,
+    PopoverModule,
+    MatBottomSheetModule,
+
     ToastrModule.forRoot({
       timeOut: 5000,
       positionClass: 'toast-top-center',
       preventDuplicates: true,
 
-    })
-
-
+    }),
+    MatIconModule
 
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[ImageinfoComponent]
 })
 export class AppModule { }

@@ -10,6 +10,7 @@
     <ul>
       <button *ngIf="!auth.isLoggedIn" routerLink="/" routerLinkActive="active"  mat-button >Home</button>
       <button  *ngIf="auth.isLoggedIn" routerLink="/dashboard"  mat-button >Dashboard</button>
+      <button  *ngIf="auth.isLoggedIn" routerLink="/admin"  mat-button >Admin</button>
       <button *ngIf="!auth.isLoggedIn"  routerLink="/login"  mat-button >Login</button>
       <button *ngIf="!auth.isLoggedIn"  routerLink="/register"   mat-button >Register</button>
     </ul>

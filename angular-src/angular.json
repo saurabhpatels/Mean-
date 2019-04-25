@@ -89,7 +89,10 @@
               "node_modules/ngx-toastr/toastr.css",
               "src/styles.scss"
             ],
-            "scripts": [],
+            "scripts": [
+              "../node_modules/jquery/dist/jquery.min.js",
+              "color.js"
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"

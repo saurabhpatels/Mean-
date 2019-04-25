@@ -6,47 +6,44 @@ EndTime: 07:10 PM
 
 Angular: [6H:00]
 
-[2H] - Register Module
-        -Validate Register Reactive Forms
-        -Improved Ui
-        -Injected Loading Bar To Every routes
-        -Created Service
-        -Implemented Register API
-        -Redirect To Login
+[2H] - Firebase Realtime
+        -Perform Pagination
+        -Create Popup
+        -Create Bottom sheets
+        -DEasing chips
+        -Integrated toaster
 
-[2H] - Created Login Module
-        -Design Login Module
-        -Add Routes For Login
-        -Created Login Api
+[2H] -  Login Module
         -Tested Login Api
         -Solved Api Issue
         -Created Toaster
         -Injected Toaster
 
-[2H] - Services
+[2H] - Inject Services
         -Services
             -GetToken
             -Logout
             -isloggedin
             -AuthenticateUser
             -RegisterUser
-        -All Tested
-        -Created Guard
-        -InnerPages Guard
-        -AuthGuard
-        -Tested All The Routes with Guards
 
-Node js: [2H:00]
-[2H] - NodeJs APi
-        -Compare Password Api
-        -JWT Token APi
-        -Create Login Api
-        -Email Verification API
-        -Registration API
-        -Created Mongodb Schema
-        -Verified Mongodb Database
-        -Validate Database
-        -Tested All The API In Postman
+
+Tazzana: [2H:00]
+[30M] - Discussion With Bhavik Patel
+[30M] - Structure Review
+[30M] - PostMan Configure
+[30M] - Created CMSList Service
+        -Integrated Service
+        -Validate Service
+
+[30M] - Created ContactUs List Service
+        -Integrated Service
+        -Validate Service
+
+[30M] - Server Error
+
+
+
 
 
 

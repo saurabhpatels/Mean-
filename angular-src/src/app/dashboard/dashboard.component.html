@@ -1,0 +1,29 @@
+
+<div class="masonry-demo">
+
+
+  <ngx-masonry [options]="masonryOptions" [useImagesLoaded]="true"  style="padding: 2%"  >
+
+    <div  *ngIf="!(fire.items | async)">
+      <ngx-content-loading  style="margin: 15%" [width]="400" [height]="800">
+        <svg:g ngx-code-preset></svg:g>
+
+      </ngx-content-loading>
+
+
+
+    </div>
+    <ngxMasonryItem [class.mat-elevation-z5]="true"   *ngFor="let picture of fire.items | async" class="masonry-item">
+
+
+
+      <img src="{{picture.url}}" class="card"   style=" width:100% ; height:100%; " >
+      <div style="position:absolute;top:0;right:0;" data-role="fieldcontain">
+        <button mat-icon-button aria-label="Delete">
+          <mat-icon color="accent" (click)="openBottomSheet()">info</mat-icon>
+        </button>
+      </div>
+    </ngxMasonryItem >
+  </ngx-masonry>
+
+</div>
