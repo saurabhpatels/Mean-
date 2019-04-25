@@ -20,7 +20,7 @@
       <img src="{{picture.url}}" class="card"   style=" width:100% ; height:100%; " >
       <div style="position:absolute;top:0;right:0;" data-role="fieldcontain">
         <button mat-icon-button aria-label="Delete">
-          <mat-icon color="accent" (click)="openBottomSheet()">info</mat-icon>
+          <mat-icon color="accent" (click)="openBottomSheet({'img':picture.authorImg, 'author':picture.author})">info</mat-icon>
         </button>
       </div>
     </ngxMasonryItem >

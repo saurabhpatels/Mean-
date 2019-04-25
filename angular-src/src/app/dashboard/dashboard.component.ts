@@ -23,9 +23,9 @@ export class DashboardComponent implements OnInit {
     initLayout: true,
     fitWidth: true
   };
-  openBottomSheet(): void {
+  openBottomSheet(object): void {
     this.bottomSheet.open(ImageinfoComponent, {
-      data: { names: ['Frodo', 'Bilbo'] }
+      data: object
     });
 
   }
