@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4f2e109-c2cb-48e2-9695-156fa74321b4" name="Default Changelist" comment="" />
+    <list default="true" id="c4f2e109-c2cb-48e2-9695-156fa74321b4" name="Default Changelist" comment="So Many Attentions">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/server/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -13,12 +15,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Logs/logs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" column="17" lean-forward="true" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            <state>
+              <caret selection-end-line="48" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -36,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/config/passport.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="207">
-              <caret line="9" column="47" lean-forward="true" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+              <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -44,12 +46,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="35" column="76" lean-forward="true" selection-start-line="35" selection-start-column="76" selection-end-line="35" selection-end-column="76" />
-              <folding>
-                <element signature="e#469#504#0" />
-                <element signature="e#574#649#0" />
-              </folding>
+            <state relative-caret-position="805">
+              <caret line="35" column="76" selection-start-line="35" selection-start-column="76" selection-end-line="35" selection-end-column="76" />
             </state>
           </provider>
         </entry>
@@ -57,13 +55,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/users.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-25">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-              <folding>
-                <element signature="e#613#629#0" />
-                <element signature="e#958#1830#0" />
-                <element signature="e#1952#1987#0" />
-              </folding>
+            <state relative-caret-position="736">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
         </entry>
@@ -95,10 +88,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="833" />
-    <option name="y" value="25" />
-    <option name="width" value="767" />
-    <option name="height" value="875" />
+    <option name="x" value="67" />
+    <option name="y" value="27" />
+    <option name="width" value="757" />
+    <option name="height" value="873" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -143,11 +136,6 @@
               <item name="mean" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="$PROJECT_DIR$" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
-            <path>
-              <item name="mean" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="$PROJECT_DIR$" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="Logs" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -171,12 +159,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.15.3" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../indiacar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/angular-src" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="/usr/local/lib/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/angular-src/node_modules/typescript/lib" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -205,7 +194,8 @@
       <workItem from="1555932330778" duration="5186000" />
       <workItem from="1556011729576" duration="8407000" />
       <workItem from="1556080124605" duration="1895000" />
-      <workItem from="1556088973296" duration="10312000" />
+      <workItem from="1556088973296" duration="10599000" />
+      <workItem from="1556112911788" duration="93000" />
     </task>
     <task id="LOCAL-00001" summary="DEmo">
       <created>1555932865428</created>
@@ -228,16 +218,23 @@
       <option name="project" value="LOCAL" />
       <updated>1556112207857</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="So Many Attentions">
+      <created>1556112398311</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1556112398311</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31335000" />
+    <option name="totallyTimeSpent" value="31715000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1533" height="875" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24966888" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24966888" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -252,6 +249,7 @@
       <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.329235" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="SVN Repositories" order="11" weight="0.329235" />
+      <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -265,7 +263,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="DEmo" />
     <MESSAGE value="So Many Attention" />
-    <option name="LAST_COMMIT_MESSAGE" value="So Many Attention" />
+    <MESSAGE value="So Many Attentions" />
+    <option name="LAST_COMMIT_MESSAGE" value="So Many Attentions" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/package.json">
@@ -310,21 +309,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/user.js">
+    <entry file="file://$PROJECT_DIR$/Logs/logs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="35" column="76" lean-forward="true" selection-start-line="35" selection-start-column="76" selection-end-line="35" selection-end-column="76" />
-          <folding>
-            <element signature="e#469#504#0" />
-            <element signature="e#574#649#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/passport.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="47" lean-forward="true" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+        <state>
+          <caret selection-end-line="48" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -335,22 +323,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/users.js">
+    <entry file="file://$PROJECT_DIR$/config/passport.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-25">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="e#613#629#0" />
-            <element signature="e#958#1830#0" />
-            <element signature="e#1952#1987#0" />
-          </folding>
+        <state relative-caret-position="207">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Logs/logs">
+    <entry file="file://$PROJECT_DIR$/models/user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="17" lean-forward="true" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        <state relative-caret-position="805">
+          <caret line="35" column="76" selection-start-line="35" selection-start-column="76" selection-end-line="35" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
