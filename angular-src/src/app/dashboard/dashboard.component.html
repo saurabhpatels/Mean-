@@ -1,18 +1,15 @@
+<div class="container" style="margin-top: 50px;">
 
-<div class="masonry-demo">
 
 
   <ngx-masonry [options]="masonryOptions" [useImagesLoaded]="true"  style="padding: 2%"  >
 
     <div  *ngIf="!(fire.items | async)">
-      <ngx-content-loading  style="margin: 15%" [width]="400" [height]="800">
+      <ngx-content-loading  style="margin: 13%; " [width]="350" [height]="700">
         <svg:g ngx-code-preset></svg:g>
-
       </ngx-content-loading>
-
-
-
     </div>
+
     <ngxMasonryItem [class.mat-elevation-z5]="true"   *ngFor="let picture of fire.items | async" class="masonry-item">
 
 
@@ -27,3 +24,4 @@
   </ngx-masonry>
 
 </div>
+

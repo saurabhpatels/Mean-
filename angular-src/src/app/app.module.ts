@@ -25,7 +25,8 @@ import { NgxContentLoadingModule } from 'ngx-content-loading';
 import { AdminComponent } from './admin/admin.component';
 import {PopoverModule} from 'ngx-popover';
 import { ImageinfoComponent } from './dashboard/imageinfo/imageinfo.component';
-
+import { MatVideoModule } from 'mat-video';
+import {NgxSpinnerModule} from "ngx-spinner";
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { ImageinfoComponent } from './dashboard/imageinfo/imageinfo.component';
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
+    MatVideoModule,
     AngularFirestoreModule,
     AngularFireDatabaseModule,
     AngularFireStorageModule,
@@ -56,6 +58,7 @@ import { ImageinfoComponent } from './dashboard/imageinfo/imageinfo.component';
     NgxContentLoadingModule,
     PopoverModule,
     MatBottomSheetModule,
+    NgxSpinnerModule,
 
     ToastrModule.forRoot({
       timeOut: 5000,

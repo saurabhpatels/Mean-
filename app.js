@@ -24,7 +24,7 @@ const app = express();
 const users = require('./routes/users');
 
 //Port Number
-const port = 4000;
+const port = 5000;
 
 //Inject Services
 app.use(cors());

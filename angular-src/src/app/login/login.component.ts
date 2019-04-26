@@ -3,6 +3,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {AuthService} from '../services/auth.service';
 import { ToastrService } from 'ngx-toastr';
 import {Router} from '@angular/router';
+import {NgxSpinnerService} from "ngx-spinner";
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -14,9 +15,11 @@ export class LoginComponent implements OnInit {
   constructor(private fb: FormBuilder ,
               private auth: AuthService,
               private toastr: ToastrService,
-              private router: Router) { }
+              private router: Router,
+              private spinner: NgxSpinnerService) { }
 
   ngOnInit() {
+
     this.LoginForm = this.fb.group({
       username:    ['', [Validators.required, Validators.minLength(8) ] ],
       password:    ['', [Validators.required, Validators.minLength(8) ] ],
@@ -37,11 +40,15 @@ export class LoginComponent implements OnInit {
     console.log(login);
   }
   authenticateUser(){
+    this.spinner.show();
     const user = this.LoginForm.value;
     this.auth.authenticateUser(user).subscribe((data: any ) => {
       console.log(data);
       if (data.success){
-         this.toastr.success(data.msg, 'Success');
+
+
+          this.spinner.hide();
+
          this.auth.storeUserData(data.token, data.user);
          this.router.navigate(['dashboard']);
        }else{

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient , HttpHeaders} from '@angular/common/http';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -10,11 +11,11 @@ export class AuthService {
 
   authToken: any;
   User: any;
-  private _user_url = 'http://localhost:4000/users/';
+  private _user_url = 'http://localhost:5000/users/';
   headers = {'Content-Type' : 'application/json'};
 
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient ) {
     let headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
   }

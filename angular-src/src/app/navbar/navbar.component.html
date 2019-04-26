@@ -1,25 +1,29 @@
 
-<mat-toolbar color="primary">
 
-
-  <div>Mean</div>
-
-  <span class="example-spacer"></span>
-
-  <nav>
-    <ul>
-      <button *ngIf="!auth.isLoggedIn" routerLink="/" routerLinkActive="active"  mat-button >Home</button>
-      <button  *ngIf="auth.isLoggedIn" routerLink="/dashboard"  mat-button >Dashboard</button>
-      <button  *ngIf="auth.isLoggedIn" routerLink="/admin"  mat-button >Admin</button>
-      <button *ngIf="!auth.isLoggedIn"  routerLink="/login"  mat-button >Login</button>
-      <button *ngIf="!auth.isLoggedIn"  routerLink="/register"   mat-button >Register</button>
-    </ul>
-
-
+  <nav class="navbar navbar-default navbar-fixed-top" [class.mat-elevation-z5]="true">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <img class="navbar-brand" src="../../favicon.ico">
+        <a class="navbar-brand" >Snapkart</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li> <a *ngIf="!auth.isLoggedIn" routerLink="/" routerLinkActive="active"  >Home</a></li>
+          <li><a  *ngIf="auth.isLoggedIn" routerLink="/dashboard"   >Dashboard</a></li>
+          <li><a  *ngIf="auth.isLoggedIn" routerLink="/admin"   >Admin</a></li>
+          <li><a *ngIf="!auth.isLoggedIn"  routerLink="/login"   >Login</a></li>
+          <li><a *ngIf="!auth.isLoggedIn"  routerLink="/register"    >Register</a></li>
+          <button (click)="logout()"   mat-button >
+            <mat-icon *ngIf=" auth.isLoggedIn" class="example-icon" aria-hidden="false" aria-label="Example delete icon">logout</mat-icon>
+          </button>
+        </ul>
+      </div>
+    </div>
   </nav>
-  <button (click)="logout()"   mat-button >
-    <mat-icon *ngIf=" auth.isLoggedIn" class="example-icon" aria-hidden="false" aria-label="Example delete icon">logout</mat-icon>
-  </button>
 
 
-</mat-toolbar>
