@@ -1,0 +1,32 @@
+<mat-nav-list >
+
+<a>
+    <img  [class.mat-elevation-z5]="true" src="{{data.img}}"
+         style="
+         width: 100px;
+         height: 100px;
+         border-radius: 50%">
+  <mat-chip style="margin-left: 400px;" color="warn" selected (click)="dismiss()"> <mat-icon >close</mat-icon> Close  </mat-chip>
+</a>
+  <a href="https://docs.google.com/" mat-list-item >
+
+    <span mat-line>{{data.author}}</span>
+    <span mat-line>author</span>
+
+  </a>
+
+  <a href="https://plus.google.com/" mat-list-item (click)="openLink($event)">
+    <span mat-line>Google Plus</span>
+    <span mat-line>Share with your friends</span>
+  </a>
+
+  <a href="https://hangouts.google.com/" mat-list-item (click)="openLink($event)">
+    <span mat-line>Google Hangouts</span>
+    <span mat-line>Show to your coworkers</span>
+  </a>
+</mat-nav-list>
+<mat-chip-list>
+  <mat-chip color="accent" selected> <mat-icon>download</mat-icon> Download  </mat-chip>
+  <mat-chip color="accent" selected> <mat-icon>logout</mat-icon> Share  </mat-chip>
+  <mat-chip color="accent" selected> <mat-icon>logout</mat-icon> Share  </mat-chip>
+</mat-chip-list>
