@@ -1,46 +1,56 @@
 DAILY WORK REPORT
 Name: Saurabh Patel
-Date: 25-04-2019
+Date: 26-04-2019
 StartTime: 10:10 PM
 EndTime: 07:10 PM
 
-Tazzana: [3H:00]
-[30M] - Discussion With Bhavik Patel
-[30M] - Structure Review
-[30M] - PostMan Configure
-[30M] - Created CMSList Service
-        -Integrated Service
-        -Validate Service
+Tazaana: [1H:30]
+[30M] - API Overview
+[30M] - Review All Files
+[30M] - Refer Code Styles
 
-[30M] - Created ContactUs List Service
-        -Integrated Service
-        -Validate Service
+NetRealty: [4H:30]
+    [2H:00] - Admin Panel
+            [30M] - R&d On Custom Theme
+            [30M] - Define a Custom Theme
+            [20M] - Material Color Palette Generated
+            [10M] - Include Accent,Primary,Warn To Custom Theme
+            [10M] - Include Custom Theme Into Angular Application
+            [10M] - Remove All Inline & Component References
+            [10M] - Created Single Reference To Styles
 
-[30M] - Server Error
+    [1H] - Agent Panel
+            [10M] - Define a Custom Theme
+            [10M] - Material Color Palette Generated
+            [10M] - Include Accent,Primary,Warn To Custom Theme
+            [10M] - Include Custom Theme Into Angular Application
+            [10M] - Remove All Inline & Component References
+            [10M] - Created Single Reference To Styles
+
+    [1H] - TM Panel
+            [10M] - Define a Custom Theme
+            [10M] - Material Color Palette Generated
+            [10M] - Include Accent,Primary,Warn To Custom Theme
+            [10M] - Include Custom Theme Into Angular Application
+            [10M] - Remove All Inline & Component References
+            [10M] - Created Single Reference To Styles
+
+    [30M] - Solved Logo & Mat-Icon Issue In Three Panel
+
+[2H]: Learn Angular
+[30M] - Promises, Observables
+        -Subscribe & Map The Observables
+
+[30M] - ngx Content Loader
+        -Implemented coding Style Content Loader
+
+[1H] - Created New Module For Masonry Grid
+        -Solved Images Grid Responsive Issue
+        -Attach Image Url List To Observables
+        -Sync Images In Realtime In Masonry Grid
 
 
-Angular: [5H:00]
 
-[2H] - Firebase Realtime
-        -Perform Pagination
-        -Create Popup
-        -Create Bottom sheets
-        -DEasing chips
-        -Integrated toaster
-
-[1H] -  Login Module
-        -Tested Login Api
-        -Solved Api Issue
-        -Created Toaster
-        -Injected Toaster
-
-[2H] - Inject Services
-        -Service
-         -GetToken
-         -Logout
-         -isloggedin
-         -AuthenticateUser
-         -RegisterUser
 
 
 
