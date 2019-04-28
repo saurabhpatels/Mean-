@@ -27,6 +27,7 @@ import {PopoverModule} from 'ngx-popover';
 import { ImageinfoComponent } from './dashboard/imageinfo/imageinfo.component';
 import { MatVideoModule } from 'mat-video';
 import {NgxSpinnerModule} from "ngx-spinner";
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,10 @@ import {NgxSpinnerModule} from "ngx-spinner";
     PopoverModule,
     MatBottomSheetModule,
     NgxSpinnerModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCxbodryeCiQaNNPkZlW7MZDU9cUMaBzLc'
+    }),
+
 
     ToastrModule.forRoot({
       timeOut: 5000,
