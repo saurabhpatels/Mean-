@@ -1,52 +1,50 @@
 DAILY WORK REPORT
 Name: Saurabh Patel
-Date: 26-04-2019
-StartTime: 10:10 PM
+Date: 29-04-2019
+StartTime: 10:00 PM
 EndTime: 07:10 PM
 
-Tazaana: [1H:30]
-[30M] - API Overview
-[30M] - Review All Files
-[30M] - Refer Code Styles
+Tazaana [1H:30]
 
-NetRealty: [4H:30]
-    [2H:00] - Admin Panel
-            [30M] - R&d On Custom Theme
-            [30M] - Define a Custom Theme
-            [20M] - Material Color Palette Generated
-            [10M] - Include Accent,Primary,Warn To Custom Theme
-            [10M] - Include Custom Theme Into Angular Application
-            [10M] - Remove All Inline & Component References
-            [10M] - Created Single Reference To Styles
+[30M] - Verify Api
+[30M] - View Structure & Coding Standards
+[30M] - Optimize & Unneccsary Keywords
 
-    [1H] - Agent Panel
-            [10M] - Define a Custom Theme
-            [10M] - Material Color Palette Generated
-            [10M] - Include Accent,Primary,Warn To Custom Theme
-            [10M] - Include Custom Theme Into Angular Application
-            [10M] - Remove All Inline & Component References
-            [10M] - Created Single Reference To Styles
+Angular Node: [6H:30]
+[30M] - R&D On Multer Module
 
-    [1H] - TM Panel
-            [10M] - Define a Custom Theme
-            [10M] - Material Color Palette Generated
-            [10M] - Include Accent,Primary,Warn To Custom Theme
-            [10M] - Include Custom Theme Into Angular Application
-            [10M] - Remove All Inline & Component References
-            [10M] - Created Single Reference To Styles
-    [30M] - Solved Logo & Mat-Icon Issue In Three Panel
+[30M] - Design Upload Page
+        -Responsive Grids
 
-[2H]: Learn Angular
-[30M] - Promises, Observables
-        -Subscribe & Map The Observables
+[30M] - Created Api For Upload Image
+        -Using Multer
 
-[30M] - ngx Content Loader
-        -Implemented coding Style Content Loader
+[30M] - Created Photos Services
+        -Fetch All Photos List
+        -Error Handling
 
-[1H] - Created New Module For Masonry Grid
-        -Solved Images Grid Responsive Issue
-        -Attach Image Url List To Observables
-        -Sync Images In Realtime In Masonry Grid
+[30M] - Perform Mongoose Operations
+        -Find
+
+[30M] - Store All The Info In Mongodb
+        -Create Schema
+        -Add Functions
+
+[1H] - Create Multer Disk Storage
+        [30M]-destination
+        [30M]-files
+
+[30M]  -Multiple Files Upload
+[30M]  -Ng2 File upload Module r&d
+[30M]  -Implement ng2 file upload module
+
+
+[1H]  - Created Post Api
+        -Test Api in Postman
+        -Solve headers Issues
+
+
+
 
 
 

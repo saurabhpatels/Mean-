@@ -4,7 +4,58 @@ const passport = require('passport');
 const jwt =     require('jsonwebtoken');
 const config =      require('../config/database');
 const User = require('../models/user');
+const Contact = require('../models/contact');
 const validator = require("email-validator");
+const multer = require('multer');
+const Photos = require('../models/photos');
+
+const storage = multer.diskStorage({
+    // destination
+    destination: function (req, file, cb) {
+        cb(null, './uploads/')
+    },
+    filename: function (req, file, cb) {
+        cb(null, Date.now()+file.originalname);
+    }
+});
+const upload = multer({ storage: storage });
+var app = express();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+
+//upload Image
+router.post("/uploadImg", upload.array("uploads[]", 12), function (req, res) {
+
+
+    for(let i =0; i < req.files.length; i++){
+
+        let newPhotos = new Photos({
+            originalname: req.files[i].originalname,
+            mimetype: req.files[i].mimetype,
+            filename: req.files[i].filename,
+            path: req.files[i].path,
+
+        });
+
+        Photos.addPhotos(newPhotos, (err, user) => {
+
+        });
+        res.send(req.files);
+    }
+
+
+
+});
+
+
+
+
+router.get('/getphotos', function(req, res) {
+    Photos.find({}, function(err, users) {
+       res.send(users);
+    });
+});
+
 
 // Register
 router.post('/register', (req, res, next) => {
@@ -31,6 +82,28 @@ router.post('/register', (req, res, next) => {
 
 });
 
+
+// contact
+router.post('/addcontact', (req, res, next) => {
+
+    let newContact = new Contact({
+        name: req.body.name,
+        number: req.body.number,
+        message: req.body.message,
+
+    });
+
+    Contact.addContact(newContact, (err, user) => {
+            if(err){
+                res.json({success: false, msg:err});
+            } else {
+                res.json({success: true, msg:'Your Message Is Sended To Ridham Studios'});
+            }
+        });
+
+
+});
+
 // Authenticate
 router.post('/authenticate', (req, res, next) => {
     const username = req.body.username;
@@ -53,7 +126,7 @@ router.post('/authenticate', (req, res, next) => {
                     token: `Bearer ${token}`,
                     user: {
                         id: user._id,
-                        name: user.name,
+                        name: user.firstname,
                         username: user.username,
                         email: user.email
                     }

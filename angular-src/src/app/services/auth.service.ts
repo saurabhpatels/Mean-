@@ -11,7 +11,7 @@ export class AuthService {
 
   authToken: any;
   User: any;
-  private _user_url = 'http://localhost:5000/users/';
+  private _user_url = 'http://localhost:4000/users/';
   headers = {'Content-Type' : 'application/json'};
 
 
@@ -19,17 +19,44 @@ export class AuthService {
     let headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
   }
+  get isLoggedIn(){
+    const user = JSON.parse(localStorage.getItem('id_token'));
+    return (user !== null ) ? true : false;
+  }
+  get getuser(){
+    const user = JSON.parse(localStorage.getItem('id_token'));
+    return user;
+  }
+  gettoken(){
+    const token = localStorage.getItem('id_token');
+    this.authToken = token;
 
-  registeruser(user){
-
-
-    return this.http.post(this._user_url + '/register', user, { headers : this.headers });
   }
 
   authenticateUser(user){
     return this.http.post(this._user_url + '/authenticate', user, { headers : this.headers });
   }
+  storeUserData(token, user){
+    localStorage.setItem('id_token', token);
+    localStorage.setItem('id_token', JSON.stringify(user));
+    this.authToken = token;
+    this.User = user;
 
+  }
+
+
+  getPhotos(){
+    return this.http.get(this._user_url + 'getphotos',  );
+  }
+  uploadimage(formData){
+    return this.http.post(this._user_url + 'uploadImg', formData  );
+  }
+  registeruser(user){
+    return this.http.post(this._user_url + '/register', user, { headers : this.headers });
+  }
+  SendContact(contact){
+    return this.http.post(this._user_url + '/addcontact', contact, { headers : this.headers });
+  }
   getprofile(user){
 
     let headers = new HttpHeaders();
@@ -39,19 +66,6 @@ export class AuthService {
     return this.http.get(this._user_url + '/profile', { headers : this.headers });
   }
 
-  storeUserData(token, user){
-  localStorage.setItem('id_token', token);
-  localStorage.setItem('id_token', JSON.stringify(user));
-  this.authToken = token;
-  this.User = user;
-
-  }
-
-  gettoken(){
-    const token = localStorage.getItem('id_token');
-    this.authToken = token;
-
-  }
 
   logout(){
     this.authToken = null;
@@ -59,8 +73,5 @@ export class AuthService {
     localStorage.clear();
   }
 
-  get isLoggedIn(){
-   const user = JSON.parse(localStorage.getItem('id_token'));
-   return (user !== null ) ? true : false;
-  }
+
 }

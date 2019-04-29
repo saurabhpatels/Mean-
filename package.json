@@ -12,10 +12,15 @@
     "cors": "*",
     "email-validator": "^2.0.4",
     "express": "*",
+    "express-fileupload": "^1.1.4",
     "jsonwebtoken": "*",
     "mongoose": "*",
+    "multer": "^1.4.1",
+    "nexmo": "^2.4.1",
     "passport": "*",
-    "passport-jwt": "*"
+    "passport-jwt": "*",
+    "sendotp": "^1.2.9",
+    "socket.io": "^2.2.0"
   },
   "author": "Saurabh Patel",
   "license": "ISC"

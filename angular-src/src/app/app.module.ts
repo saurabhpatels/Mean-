@@ -27,6 +27,8 @@ import {PopoverModule} from 'ngx-popover';
 import { ImageinfoComponent } from './dashboard/imageinfo/imageinfo.component';
 import { MatVideoModule } from 'mat-video';
 import {NgxSpinnerModule} from "ngx-spinner";
+import { UploadComponent } from './upload/upload.component';
+
 
 @NgModule({
   declarations: [
@@ -38,6 +40,7 @@ import {NgxSpinnerModule} from "ngx-spinner";
     DashboardComponent,
     AdminComponent,
     ImageinfoComponent,
+    UploadComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
@@ -60,11 +63,10 @@ import {NgxSpinnerModule} from "ngx-spinner";
     MatBottomSheetModule,
     NgxSpinnerModule,
 
-    ToastrModule.forRoot({
-      timeOut: 5000,
-      positionClass: 'toast-top-center',
-      preventDuplicates: true,
 
+    ToastrModule.forRoot({
+      positionClass: 'toast-top-center',
+      timeOut : 3000
     }),
     MatIconModule
 

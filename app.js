@@ -5,6 +5,7 @@ const cors = require('cors');
 const passport = require('passport');
 const mongoose = require('mongoose');
 const config = require('./config/database');
+const upload = require('express-fileupload');
 
 //Connect To Databse
 mongoose.connect(config.database);
@@ -24,11 +25,18 @@ const app = express();
 const users = require('./routes/users');
 
 //Port Number
-const port = 5000;
+const port = 4000;
 
 //Inject Services
 app.use(cors());
+app.use('/uploads',express.static('uploads'));
 app.use(express.static(path.join(__dirname,'public')));
+
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 app.use(bodyparser.json());
 app.use('/users',users);
 app.use(passport.initialize());

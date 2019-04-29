@@ -16,6 +16,7 @@
           <li> <a *ngIf="!auth.isLoggedIn" routerLink="/" routerLinkActive="active"  >Home</a></li>
           <li><a  *ngIf="auth.isLoggedIn" routerLink="/dashboard"   >Dashboard</a></li>
           <li><a  *ngIf="auth.isLoggedIn" routerLink="/admin"   >Admin</a></li>
+          <li><a  *ngIf="auth.isLoggedIn" routerLink="/upload"   >Upload</a></li>
           <li><a *ngIf="!auth.isLoggedIn"  routerLink="/login"   >Login</a></li>
           <li><a *ngIf="!auth.isLoggedIn"  routerLink="/register"    >Register</a></li>
           <button (click)="logout()"   mat-button >

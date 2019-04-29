@@ -10,8 +10,7 @@ import {ImageinfoComponent} from './imageinfo/imageinfo.component';
 })
 
 export class DashboardComponent implements OnInit {
-  animal: "string";
-  name: "string";
+
   constructor(private fire: FirebaseService,
               private bottomSheet: MatBottomSheet
              ) {

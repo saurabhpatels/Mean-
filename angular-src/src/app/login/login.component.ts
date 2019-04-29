@@ -40,18 +40,19 @@ export class LoginComponent implements OnInit {
     console.log(login);
   }
   authenticateUser(){
-    this.spinner.show();
+
     const user = this.LoginForm.value;
     this.auth.authenticateUser(user).subscribe((data: any ) => {
       console.log(data);
       if (data.success){
 
 
-          this.spinner.hide();
 
+        this.toastr.success(data.user.name , 'Welcome');
          this.auth.storeUserData(data.token, data.user);
          this.router.navigate(['dashboard']);
        }else{
+
          this.toastr.error(data.msg, 'Failed');
          this.router.navigate(['login']);
        }
