@@ -23,10 +23,7 @@ import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {NgxMasonryModule} from 'ngx-masonry';
 import { NgxContentLoadingModule } from 'ngx-content-loading';
 import { AdminComponent } from './admin/admin.component';
-import {PopoverModule} from 'ngx-popover';
 import { ImageinfoComponent } from './dashboard/imageinfo/imageinfo.component';
-import { MatVideoModule } from 'mat-video';
-import {NgxSpinnerModule} from "ngx-spinner";
 import { UploadComponent } from './upload/upload.component';
 
 
@@ -45,7 +42,6 @@ import { UploadComponent } from './upload/upload.component';
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    MatVideoModule,
     AngularFirestoreModule,
     AngularFireDatabaseModule,
     AngularFireStorageModule,
@@ -59,9 +55,9 @@ import { UploadComponent } from './upload/upload.component';
     HttpClientModule,
     NgxMasonryModule,
     NgxContentLoadingModule,
-    PopoverModule,
+
     MatBottomSheetModule,
-    NgxSpinnerModule,
+
 
 
     ToastrModule.forRoot({
@@ -74,6 +70,6 @@ import { UploadComponent } from './upload/upload.component';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents:[ImageinfoComponent]
+  entryComponents: [ImageinfoComponent]
 })
 export class AppModule { }

@@ -1,0 +1,15 @@
+.masonry-item { width: 250px; }
+ngxMasonryItem{
+  padding: 0.4% 0.4% 0% 0.4% ;
+  margin : 0.4%;
+  border-radius: 5px;
+}
+
+
+ngxMasonryItem:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+}

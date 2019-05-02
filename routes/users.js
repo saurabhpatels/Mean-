@@ -1,4 +1,4 @@
-const express =         require('express');
+const express =  require('express');
 const router = express.Router();
 const passport = require('passport');
 const jwt =     require('jsonwebtoken');
@@ -19,42 +19,6 @@ const storage = multer.diskStorage({
     }
 });
 const upload = multer({ storage: storage });
-var app = express();
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
-
-//upload Image
-router.post("/uploadImg", upload.array("uploads[]", 12), function (req, res) {
-
-
-    for(let i =0; i < req.files.length; i++){
-
-        let newPhotos = new Photos({
-            originalname: req.files[i].originalname,
-            mimetype: req.files[i].mimetype,
-            filename: req.files[i].filename,
-            path: req.files[i].path,
-
-        });
-
-        Photos.addPhotos(newPhotos, (err, user) => {
-
-        });
-        res.send(req.files);
-    }
-
-
-
-});
-
-
-
-
-router.get('/getphotos', function(req, res) {
-    Photos.find({}, function(err, users) {
-       res.send(users);
-    });
-});
 
 
 // Register
@@ -79,28 +43,6 @@ router.post('/register', (req, res, next) => {
     }else{
         res.json({success: false, msg:'Email Is Not Exists'});
     }
-
-});
-
-
-// contact
-router.post('/addcontact', (req, res, next) => {
-
-    let newContact = new Contact({
-        name: req.body.name,
-        number: req.body.number,
-        message: req.body.message,
-
-    });
-
-    Contact.addContact(newContact, (err, user) => {
-            if(err){
-                res.json({success: false, msg:err});
-            } else {
-                res.json({success: true, msg:'Your Message Is Sended To Ridham Studios'});
-            }
-        });
-
 
 });
 
@@ -138,6 +80,71 @@ router.post('/authenticate', (req, res, next) => {
     });
 });
 
+//upload Image
+router.post("/upload-photo", upload.array("uploads[]", 12), function (req, res) {
+
+    for(let i =0; i < req.files.length; i++){
+
+        let newPhotos = new Photos({
+            originalname: req.files[i].originalname,
+            mimetype: req.files[i].mimetype,
+            filename: req.files[i].filename,
+            path: req.files[i].path,
+
+        });
+        Photos.addPhotos(newPhotos, (err, user) => {
+        });
+        res.send(req.files);
+    }
+});
+
+//Delete-Photo
+router.post('/delete-photo', function(req, res) {
+    if(req.body.id) {
+        Photos.remove({_id: req.body.id})
+            .then((docs)=>{
+                if(docs) {
+                    res.send({"success":true,data:docs});
+                } else {
+                    res.send({"success":false,data:"no such user exist"});
+                }
+            }).catch((err)=>{
+            reject(err);
+        })
+    }else {
+        res.send({"success":false,data:"please provide correct Id"});
+    }
+
+
+});
+
+//Get-Photos
+router.get('/getphotos', function(req, res) {
+    Photos.find({}, function(err, users) {
+       res.send(users);
+    });
+});
+
+// contact
+router.post('/addcontact',passport.authenticate('jwt', {session:false}), (req, res, next) => {
+
+    let newContact = new Contact({
+        name: req.body.name,
+        number: req.body.number,
+        message: req.body.message,
+
+    });
+
+    Contact.addContact(newContact, (err, user) => {
+            if(err){
+                res.json({success: false, msg:err});
+            } else {
+                res.json({success: true, msg:'Your Message Is Sended To Ridham Studios'});
+            }
+        });
+
+
+});
 
 // Profile
 router.post('/profile', passport.authenticate('jwt', {session:false}), (req, res, next) => {

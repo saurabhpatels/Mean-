@@ -1,0 +1,40 @@
+<div class="container-fluid" >
+  <div style="padding: 25px;"  [class.mat-elevation-z5]="true" >
+    <div class="row">
+      <div class="col-md-4">
+    <div class="example-container">
+
+      <mat-form-field>
+        <mat-select placeholder="Category">
+          <mat-option value="random">random</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <input class="hide"  id="cin" name="cin" type="file" (change)="fileChangeEvent($event)" placeholder="Upload a file..." multiple  #fileinput>
+    </div>
+    <div class="example-button-row">
+      <button [class.mat-elevation-z5]="true" (click)="fileinput.click()" mat-raised-button color="accent">Select <mat-icon>attach_file</mat-icon></button>
+      <button [class.mat-elevation-z5]="true" (click)="upload()" mat-raised-button color="accent">Upload</button>
+    </div>
+      </div>
+    </div>
+    <div class="row" >
+      <ngx-masonry [options]="masonryOptions" [useImagesLoaded]="true"  style="padding: 2%"  >
+        <div  *ngIf="items < 5">
+            <ngx-content-loading  style="margin: 13%; " [width]="350" [height]="700">
+              <svg:g ngx-code-preset></svg:g>
+            </ngx-content-loading>
+          </div>
+        <ngxMasonryItem [class.mat-elevation-z5]="true"  style="margin: 10px;"   *ngFor="let picture of items " class="masonry-item">
+
+          <img  src="{{'http://localhost:3000/'+ picture.path || 'https://www.stonemcc.com/wp-content/uploads/2018/07/user-2517433_960_720.png'}}" class="card"   style=" width:100% ; height:100%; " >
+          <div style="position:absolute;top:0;right:0;" data-role="fieldcontain">
+            <button mat-icon-button aria-label="Delete" (click)="DeletePhoto(picture._id)">
+              <mat-icon color="warn">delete</mat-icon>
+            </button>
+          </div>
+        </ngxMasonryItem >
+        </ngx-masonry>
+    </div>
+  </div>
+</div>
+

@@ -25,7 +25,7 @@ const app = express();
 const users = require('./routes/users');
 
 //Port Number
-const port = 4000;
+const port = 3000;
 
 //Inject Services
 app.use(cors());
@@ -38,12 +38,21 @@ app.use(function (req, res, next) {
     next();
 });
 app.use(bodyparser.json());
-app.use('/users',users);
+
 app.use(passport.initialize());
 app.use(passport.session());
 
 require('./config/passport')(passport);
+app.use('/users',users);
 
+// Index Route
+app.get('/', (req, res) => {
+    res.send('invaild endpoint');
+});
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/index.html'));
+});
 //Listen To The Port
 app.listen(port,()=>{
     console.log('server Is Running On Port Number:' + port);

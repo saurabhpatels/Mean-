@@ -3,7 +3,6 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {AuthService} from '../services/auth.service';
 import { ToastrService } from 'ngx-toastr';
 import {Router} from '@angular/router';
-import {NgxSpinnerService} from "ngx-spinner";
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -15,8 +14,7 @@ export class LoginComponent implements OnInit {
   constructor(private fb: FormBuilder ,
               private auth: AuthService,
               private toastr: ToastrService,
-              private router: Router,
-              private spinner: NgxSpinnerService) { }
+              private router: Router) { }
 
   ngOnInit() {
 
@@ -25,7 +23,6 @@ export class LoginComponent implements OnInit {
       password:    ['', [Validators.required, Validators.minLength(8) ] ],
     });
   }
-
   get username() {
     return this.LoginForm.get('username');
   }
@@ -37,26 +34,21 @@ export class LoginComponent implements OnInit {
   }
   login(){
     const login = this.LoginForm.value;
-    console.log(login);
   }
+
   authenticateUser(){
 
     const user = this.LoginForm.value;
     this.auth.authenticateUser(user).subscribe((data: any ) => {
-      console.log(data);
+      console.log(data.token);
       if (data.success){
-
-
-
         this.toastr.success(data.user.name , 'Welcome');
-         this.auth.storeUserData(data.token, data.user);
-         this.router.navigate(['dashboard']);
+        this.auth.storeUserData(data.token, data.user);
+        this.router.navigate(['dashboard']);
        }else{
-
-         this.toastr.error(data.msg, 'Failed');
-         this.router.navigate(['login']);
+        this.toastr.error(data.msg, 'Failed');
+        this.router.navigate(['login']);
        }
     });
-
   }
 }

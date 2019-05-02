@@ -8,64 +8,68 @@ import {HttpClient , HttpHeaders} from '@angular/common/http';
 })
 
 export class AuthService {
-
+  private _user_url = 'http://localhost:3000/users/';
   authToken: any;
   User: any;
-  private _user_url = 'http://localhost:4000/users/';
-  headers = {'Content-Type' : 'application/json'};
 
 
-  constructor(private http: HttpClient ) {
-    let headers = new HttpHeaders();
-    headers.append('Content-Type', 'application/json');
-  }
-  get isLoggedIn(){
-    const user = JSON.parse(localStorage.getItem('id_token'));
-    return (user !== null ) ? true : false;
-  }
-  get getuser(){
-    const user = JSON.parse(localStorage.getItem('id_token'));
-    return user;
-  }
-  gettoken(){
+  constructor(private http: HttpClient ) {}
+
+  loadToken() {
     const token = localStorage.getItem('id_token');
     this.authToken = token;
+  }
 
+  registeruser(user){
+    let headers = new HttpHeaders();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post(this._user_url + '/register', user, { headers });
   }
 
   authenticateUser(user){
-    return this.http.post(this._user_url + '/authenticate', user, { headers : this.headers });
-  }
-  storeUserData(token, user){
-    localStorage.setItem('id_token', token);
-    localStorage.setItem('id_token', JSON.stringify(user));
-    this.authToken = token;
-    this.User = user;
-
+    let headers = new HttpHeaders();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post(this._user_url + '/authenticate', user, { headers });
   }
 
+  uploadimage(formData){
+    this.loadToken();
+    let headers = new HttpHeaders();
+    headers.append('Authorization', this.authToken);
+    headers.append('Content-Type', 'application/json');
+    return this.http.post(this._user_url + 'upload-photo', formData  , {headers} );
+  }
 
   getPhotos(){
-    return this.http.get(this._user_url + 'getphotos',  );
-  }
-  uploadimage(formData){
-    return this.http.post(this._user_url + 'uploadImg', formData  );
-  }
-  registeruser(user){
-    return this.http.post(this._user_url + '/register', user, { headers : this.headers });
-  }
-  SendContact(contact){
-    return this.http.post(this._user_url + '/addcontact', contact, { headers : this.headers });
-  }
-  getprofile(user){
-
+    this.loadToken();
     let headers = new HttpHeaders();
-    this.gettoken();
-    headers.append('Content-Type', 'application/json');
     headers.append('Authorization', this.authToken);
-    return this.http.get(this._user_url + '/profile', { headers : this.headers });
+    headers.append('Content-Type', 'application/json');
+    return this.http.get(this._user_url + 'getphotos', {headers} );
   }
 
+  DeletePhoto(data){
+    this.loadToken();
+    let headers = new HttpHeaders();
+    headers.append('Authorization', this.authToken);
+    headers.append('Content-Type', 'application/json');
+    return this.http.post(this._user_url + 'delete-photo', data, { headers });
+  }
+
+  SendContact(contact){
+    this.loadToken();
+    let headers = new HttpHeaders();
+    headers.append('Authorization', this.authToken);
+    headers.append('Content-Type', 'application/json');
+    return this.http.post(this._user_url + '/addcontact', contact, { headers });
+  }
+
+  storeUserData(token, user){
+    localStorage.setItem('id_token', token);
+    localStorage.setItem('user', JSON.stringify(user));
+    this.authToken = token;
+    this.User = user;
+  }
 
   logout(){
     this.authToken = null;
@@ -73,5 +77,13 @@ export class AuthService {
     localStorage.clear();
   }
 
+  get isLoggedIn(){
+    const user = JSON.parse(localStorage.getItem('user'));
+    return (user !== null ) ? true : false;
+  }
 
+  get getuser(){
+    const user = JSON.parse(localStorage.getItem('user'));
+    return user;
+  }
 }

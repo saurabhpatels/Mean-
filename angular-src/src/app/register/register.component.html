@@ -1,64 +1,49 @@
-
-<div class="center" [class.mat-elevation-z15]="true" style="border-radius: 2%; padding: 30px">
-
-  <img  [class.mat-elevation-z5]="true"  src="../../favicon.ico" class="logo">
-  <div>
-    <form [formGroup]="myForm"class="example-form" style=" padding-top: 100px;">
-
-
-    <mat-form-field class="example-full-width">
+<div class="container-fluid">
+  <div class="registerform" [class.mat-elevation-z5]="true"  >
+    <img [class.mat-elevation-z5]="true" class="formlogo" src="../../assets/photos.png" >
+    <form [formGroup]="myForm"class="example-form" >
+      <mat-form-field class="example-full-width">
       <input matInput placeholder="First name" formControlName="firstname">
       <mat-icon matSuffix>account_circle</mat-icon>
       <mat-error *ngIf="firstname.invalid && firstname.untouched">
         Please verify Firstname
       </mat-error>
     </mat-form-field>
-    <mat-form-field class="example-full-width">
+      <mat-form-field class="example-full-width">
       <input matInput placeholder="LastName" formControlName="lastname">
       <mat-icon matSuffix>account_circle</mat-icon>
       <mat-error *ngIf="lastname.invalid && lastname.untouched">
         Please verify Lastname
       </mat-error>
     </mat-form-field>
-
-
-    <mat-form-field class="example-full-width">
+      <mat-form-field class="example-full-width">
       <input matInput placeholder="Email " formControlName="email">
       <mat-icon matSuffix>email</mat-icon>
       <mat-error *ngIf="email.invalid && email.untouched">
       Please verify Email
       </mat-error>
     </mat-form-field>
-    <mat-form-field class="example-full-width">
+      <mat-form-field class="example-full-width">
       <input matInput placeholder="Username " formControlName="username">
       <mat-icon matSuffix>account_box</mat-icon>
       <mat-error *ngIf="username.invalid && username.untouched">
         Please verify USername
       </mat-error>
     </mat-form-field>
-    <mat-form-field class="example-full-width">
+      <mat-form-field class="example-full-width">
       <input matInput placeholder="Password " formControlName="password">
       <mat-icon matSuffix>vpn_key</mat-icon>
       <mat-error *ngIf="password.invalid && password.untouched">
         Please verify Password
       </mat-error>
     </mat-form-field>
-<p></p><p></p>
-  <table class="example-full-width" cellspacing="0"><tr>
-    <td>
+      <div class="example-button-row">
       <button mat-raised-button type="submit" (click)="registeruser()" [disabled]="myForm.invalid" color="primary">Register</button>
-    </td>
-    <td>
       <button mat-raised-button (click)="clear()" color="accent">Clear</button>
-    </td>
-    <td>
       <button mat-raised-button color="warn">Cancle</button>
-    </td>
-  </tr></table>
-
-</form>
-
-
+      </div>
+    </form>
   </div>
-</div>
+  </div>
+
 
