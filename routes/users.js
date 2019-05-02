@@ -8,7 +8,6 @@ const Contact = require('../models/contact');
 const validator = require("email-validator");
 const multer = require('multer');
 const Photos = require('../models/photos');
-
 const storage = multer.diskStorage({
     // destination
     destination: function (req, file, cb) {
